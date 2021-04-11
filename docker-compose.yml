@@ -1,0 +1,6 @@
+version: "3.8" # Docker Composeファイルのバージョン指定
+services: # サービス名
+    app: # アプリケーションサーバ
+        build: ./infra/php # ビルドを実行する作業ディレクトリ
+        volumes: # コンテナ側へマウントしたいときに指定
+            - ./backend:/work
